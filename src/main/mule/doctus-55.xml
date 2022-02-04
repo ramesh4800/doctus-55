@@ -9,7 +9,8 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	</http:listener-config>
 	<flow name="doctus-55Flow" doc:id="0ce45602-c21f-4f00-8b39-210b5c666328" >
 		<http:listener doc:name="Listener" doc:id="cddcc696-2069-4eef-8895-7fb884f3c03a" config-ref="HTTP_Listener_config" path="/demo"/>
-		<logger level="INFO" doc:name="Logger" doc:id="56cba172-5e15-4585-8bca-468820ce6c59" />
-		<set-payload value="#[payload]" doc:name="Set Payload" doc:id="6c5968eb-4059-471a-852a-9ed81f9a6545" />
+		<logger level="INFO" doc:name="Logger" doc:id="56cba172-5e15-4585-8bca-468820ce6c59" message="success"/>
+		<set-payload value="payload" doc:name="Set Payload" doc:id="6c5968eb-4059-471a-852a-9ed81f9a6545" />
+		<logger level="INFO" doc:name="Logger" doc:id="e3c7bcf1-7cfd-45e3-b2a0-e71d1b06b2c9" message="end of the flow"/>
 	</flow>
 </mule>
